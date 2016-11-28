@@ -1,0 +1,237 @@
+@import '{reywood:bootstrap3-sass}/bootstrap';
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i);
+
+$open-sans: 'Open Sans', sans-serif;
+$semi-bold: 600;
+$bold: 799;
+
+$default-color: #fff;
+$default-background-color: #1f1f1f;
+
+html, body {
+    height: 100%;
+
+    font-family: $open-sans;
+
+    color: $default-color;
+    background-color: $default-background-color;
+}
+
+.wrapper {
+    height: 100vh;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    & .header {
+        flex: none;
+        margin: 0 1em;
+    }
+
+    & .content {
+        flex: 1;
+        display: flex;
+    }
+}
+
+a {
+    &, &:visited {
+        color: #d5d5d5;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.scrollable {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #757575;
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #828282;
+    }
+    &::-webkit-scrollbar-thumb:active {
+        background: #7e7e7e;
+    }
+    &::-webkit-scrollbar-track {
+        background: #dfdfdf;
+        border: 0 none #ffffff;
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-track:hover {
+        background: #dfdfdf;
+    }
+    &::-webkit-scrollbar-track:active {
+        background: #dfdfdf;
+    }
+    &::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+}
+
+.search-component {
+    height: 2em;
+
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid rgba(219, 219, 219, 0.5);
+    border-radius: 40px;
+    outline: none;
+    padding: 0 10px;
+    margin: 0 1em;
+}
+
+.header-component {
+    display: flex;
+
+    height: 4em;
+
+    &__title {
+        font-size: 3em;
+        color: #5abb68;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        list-style: none;
+        margin: 0;
+
+        &_item {
+            height: 2em;
+            line-height: 2em;
+            padding: 0 10px;
+            margin-right: 1em;
+
+            transition: background .1s ease;
+
+            &:hover {
+                background-color: #5abb68;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.grid-list__actions {
+    height: 2em;
+    margin: .5em 0;
+
+    & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        height: 1em;
+
+        & li {
+            font-size: 1.5em;
+            cursor: pointer;
+            margin: 0 .5em;
+        }
+    }
+}
+
+.movie-poster {
+    display: block;
+    position: relative;
+
+    background-size: 100%;
+    background-color: #000;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
+
+    &:after {
+        padding-top: 150%;
+        display: block;
+        content: '';
+    }
+
+    &__actions {
+        font-size: 1.4em;
+
+        & span {
+            cursor: pointer;
+        }
+    }
+}
+
+.movie-grid {
+    &__item {
+        margin-bottom: 2rem;
+
+        &_description {
+            font-size: .8em;
+            font-weight: $semi-bold;
+
+            padding: .2em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.movie-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        position: relative;
+
+        background-size: cover;
+        background-position: center;
+
+        height: 10em;
+
+        &_overlay {
+            width: 100%;
+            height: 100%;
+            padding: 1em;
+
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+        }
+
+        &_title {
+            font-size: 1.4em;
+        }
+
+        &_overview {
+            width: 90%;
+        }
+    }
+}

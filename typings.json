@@ -1,0 +1,12 @@
+{
+  "globalDependencies": {
+    "kadira:flow-router": "github:meteor-typings/flow-router#972012feb2a23b0be17fd4340321a4268fa2f3b2",
+    "meteor": "registry:env/meteor#1.3.0+20160830163906",
+    "moment": "registry:dt/moment#2.11.1+20161010105546",
+    "react": "registry:dt/react#0.14.0+20161124131900",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+  },
+  "dependencies": {
+    "react-bootstrap": "github:react-bootstrap/react-bootstrap-typescript/index.d.ts#0e41c6a6886639f30011c2573f00cc9af20807cb"
+  }
+}

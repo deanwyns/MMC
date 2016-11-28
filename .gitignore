@@ -2,3 +2,4 @@
 node_modules/
 typings/
 .meteor/local/
+development.json
